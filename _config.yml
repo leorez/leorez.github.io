@@ -1,9 +1,9 @@
-title : Wall-E - Jekyll
-description: 'A Modern Jekyll Theme'
+title : Leorez Blog
+description: 'Leorez Blog'
 
 markdown: kramdown
 highlighter: rouge
-logo: false
+logo: true
 paginate: 15
 baseurl: /
 plugins: [jekyll-gist]
