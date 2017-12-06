@@ -6,6 +6,7 @@ modified: 2016-06-01T15:27:45-04:00
 tags: [sample post, code, highlighting]
 author: Abhishek
 image:
+  title: /images/react-native-tutorial-cover.png
   feature: abstract-10.jpg
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/

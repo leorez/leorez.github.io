@@ -5,6 +5,7 @@ description: "Sample post with a background image CSS override."
 tags: [sample post]
 author: Abhishek
 image:
+  title: /images/gulp-js-ile-otomasyon.png
   background: triangular.png
 ---
 
