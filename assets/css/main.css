@@ -122,3 +122,17 @@ main {
 .post-container {
     font-family: "Open Sans", sans-serif;
 }
+
+.center {
+    text-align: center;
+}
+
+.screenshot {
+    width: 300px;
+    margin-top: 40px;
+}
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}

@@ -1,23 +1,46 @@
 ---
 layout: post
-title: React Native로 To-Do앱을 만들어보자
-description: "리엑트네이티브 기본사용법부터 익혀보자"
+title: React Native로 간단한 기능의 To-Do List 앱을 만들어보자 1
+description: 우선 간단한것 부터 시작해 보자
 tags: [sample post]
 author: Leorez
 image:
-  title: /images/nginx-ve-lets-encrypt-ile-http2.png
+  title: /images/react-native-tutorial-cover.png
   background: triangular.png
 ---
 
-Here be a sample post with a custom background image. To utilize this "feature" just add the following YAML to a post's front matter.
+<img src="/images/react-native-tutorial-cover.png">
 
-```yaml
-image:
-  background: filename.png
-```
+* StyleSheet
+* 프로젝트 아키텍쳐
+* JSX
+* ES6
+* To-Do List 프로토타입 만들기
+* iOS Simulator Developer menu
+* 프로젝트 기능 정리
 
-This little bit of YAML makes the assumption that your background image asset is in the `/images` folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.
 
-If you want to set a background image for the entire site just add `background: filename.png` to your `_config.yml` and BOOM --- background images on every page!
+## 프로젝트 준비 초기화
 
-<div xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" about="http://subtlepatterns.com" class="notice">Background images from <span property="dct:title">Subtle Patterns</span> (<a rel="cc:attributionURL" property="cc:attributionName" href="http://subtlepatterns.com">Subtle Patterns</a>) / <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></div>
+프로젝트를 Todo라는 이름으로 만들고 일단 시뮬레이터에서 구동해보겠습니다.
+
+터미널 명령창을 열고 다음과 같이 입력합니다.
+
+{% highlight bash %}
+react-native init Todo
+cd Todo
+react-native run-ios (or run-android)
+{% endhighlight %}
+
+
+
+<img class="screenshot center" src="/images/screenshot001.jpg">
+
+
+
+시뮬레이터가 시작되면서 위와 같은 화면을 보게됩니다. react-native-cli가 설치되어있지 않으면 에러를 만나게 됩니다. 설치는 다음 링크를 참조하세요.
+
+리엑트네이티브의 장점중하나는 프로토타입을 쉽게 만들고 미리 실행해 볼수 있다는 점입니다.
+
+
+<img class="screenshot center" src="/images/screenshot002.jpg">

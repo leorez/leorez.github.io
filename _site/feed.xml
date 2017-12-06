@@ -2,26 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leorez Blog</title>
-    <description>Welcome Leorez Blog</description>
+    <description>Full stack programmer Leorez Blog</description>
     <link>http://localhost:4000//</link>
     <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 06 Dec 2017 12:37:49 +0900</pubDate>
-    <lastBuildDate>Wed, 06 Dec 2017 12:37:49 +0900</lastBuildDate>
+    <pubDate>Wed, 06 Dec 2017 16:58:38 +0900</pubDate>
+    <lastBuildDate>Wed, 06 Dec 2017 16:58:38 +0900</lastBuildDate>
     <generator>Jekyll v3.6.2</generator>
     
       <item>
-        <title>React Native로 To-Do앱을 만들어보자</title>
-        <description>&lt;p&gt;Here be a sample post with a custom background image. To utilize this “feature” just add the following YAML to a post’s front matter.&lt;/p&gt;
+        <title>React Native로 간단한 기능의 To-Do List 앱을 만들어보자 1</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/images/react-native-tutorial-cover.png&quot; /&gt;&lt;/p&gt;
 
-&lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;na&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;filename.png&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;StyleSheet&lt;/li&gt;
+  &lt;li&gt;프로젝트 아키텍쳐&lt;/li&gt;
+  &lt;li&gt;JSX&lt;/li&gt;
+  &lt;li&gt;ES6&lt;/li&gt;
+  &lt;li&gt;To-Do List 프로토타입 만들기&lt;/li&gt;
+  &lt;li&gt;iOS Simulator Developer menu&lt;/li&gt;
+  &lt;li&gt;프로젝트 기능 정리&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;This little bit of YAML makes the assumption that your background image asset is in the &lt;code class=&quot;highlighter-rouge&quot;&gt;/images&lt;/code&gt; folder. If you place it somewhere else or are hotlinking from the web, just include the full http(s):// URL. Either way you should have a background image that is tiled.&lt;/p&gt;
+&lt;h2 id=&quot;프로젝트-준비-초기화&quot;&gt;프로젝트 준비 초기화&lt;/h2&gt;
 
-&lt;p&gt;If you want to set a background image for the entire site just add &lt;code class=&quot;highlighter-rouge&quot;&gt;background: filename.png&lt;/code&gt; to your &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; and BOOM — background images on every page!&lt;/p&gt;
+&lt;p&gt;프로젝트를 Todo라는 이름으로 만들고 일단 시뮬레이터에서 구동해보겠습니다.&lt;/p&gt;
 
-&lt;div xmlns:cc=&quot;http://creativecommons.org/ns#&quot; xmlns:dct=&quot;http://purl.org/dc/terms/&quot; about=&quot;http://subtlepatterns.com&quot; class=&quot;notice&quot;&gt;Background images from &lt;span property=&quot;dct:title&quot;&gt;Subtle Patterns&lt;/span&gt; (&lt;a rel=&quot;cc:attributionURL&quot; property=&quot;cc:attributionName&quot; href=&quot;http://subtlepatterns.com&quot;&gt;Subtle Patterns&lt;/a&gt;) / &lt;a rel=&quot;license&quot; href=&quot;http://creativecommons.org/licenses/by-sa/3.0/&quot;&gt;CC BY-SA 3.0&lt;/a&gt;&lt;/div&gt;
+&lt;p&gt;터미널 명령창을 열고 다음과 같이 입력합니다.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;react-native init Todo
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Todo
+react-native run-ios &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;or run-android&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img class=&quot;screenshot center&quot; src=&quot;/images/screenshot001.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;시뮬레이터가 시작되면서 위와 같은 화면을 보게됩니다. react-native-cli가 설치되어있지 않으면 에러를 만나게 됩니다. 설치는 다음 링크를 참조하세요.&lt;/p&gt;
+
+&lt;p&gt;리엑트네이티브의 장점중하나는 프로토타입을 쉽게 만들고 미리 실행해 볼수 있다는 점입니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&quot;screenshot center&quot; src=&quot;/images/screenshot002.jpg&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Tue, 05 Dec 2017 00:00:00 +0900</pubDate>
         <link>http://localhost:4000//2017/12/react-native-tutorial.html</link>
