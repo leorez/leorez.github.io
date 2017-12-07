@@ -44,10 +44,10 @@
                             </div>
                         </div>
 
-                        <a class="item" href="http://stallman.org/facebook.html">
+                        <a class="item" href="https://www.facebook.com/noruya">
                             <i class="facebook link icon"></i>
                         </a>
-                        <a class="item" href="https://github.com/abhn">
+                        <a class="item" href="https://github.com/leorez">
                             <i class="github link icon"></i>
                         </a>
                         <a class="item" href="/feed.xml">Subscribe</a>
@@ -65,7 +65,7 @@
             05 Dec 2017 
              
         </span>
-        <h1 class="post-title">React Native로 간단한 기능의 To-Do List 앱을 만들어보자 1</h1>
+        <h1 class="post-title">React Native로 간단버전의 To-Do List 앱을 만들어보자 1</h1>
     </center>
     <div class="ui divider"></div>
     <p><img src="/images/react-native-tutorial-cover.png" /></p>
@@ -80,7 +80,7 @@
   <li>프로젝트 기능 정리</li>
 </ul>
 
-<h2 id="프로젝트-준비-초기화">프로젝트 준비 초기화</h2>
+<h2 id="프로젝트-초기화">프로젝트 초기화</h2>
 
 <p>프로젝트를 Todo라는 이름으로 만들고 일단 시뮬레이터에서 구동해보겠습니다.</p>
 
@@ -94,9 +94,75 @@ react-native run-ios <span class="o">(</span>or run-android<span class="o">)</sp
 
 <p>시뮬레이터가 시작되면서 위와 같은 화면을 보게됩니다. react-native-cli가 설치되어있지 않으면 에러를 만나게 됩니다. 설치는 다음 링크를 참조하세요.</p>
 
-<p>리엑트네이티브의 장점중하나는 프로토타입을 쉽게 만들고 미리 실행해 볼수 있다는 점입니다.</p>
+<p>리엑트네이티브의 장점중하나는 상용 프로토타이핑툴을 사용하지 않아도 프로토타입을 쉽게 만들고 미리 실행해 볼 수 있다는 점입니다. 게다가 프로토타이핑된 결과물을 바로 개발에 사용할 수 있다는 커다란 이점이 있지요.</p>
+
+<p>그래서 리엑트네이티브로 개발할때는 UI를 미리만들어 시험해 보고난뒤 실제 기능을 하나씩 구현하는 방법을 추천합니다.</p>
+
+<p>이 튜토리얼에서도 같은 방식으로 진행해 나갑니다.</p>
+
+<p>프로젝트를 만들기 위해서 우선 기능 정의가 필요할것 같습니다.</p>
+
+<h2 id="프로젝트-기능-정의">프로젝트 기능 정의</h2>
+
+<ul>
+  <li>할일 목록보기 기능</li>
+  <li>할일 추가 기능</li>
+  <li>할일 삭제 기능</li>
+  <li>할일 완료 기능</li>
+</ul>
+
+<p>일단 가장 간단하고 사용할수 있는 앱을 만들기위한 가장 기본적인 기능들만 정의 했습니다.</p>
+
+<p>그럼 일단 완성된 모습을 보시죠.</p>
+
+<p>우리의 첫번째 어플의 목표라고 할 수 있겠습니다.</p>
+
+<p>위 그림을 참고로해서 UI/UX만을 구현해서 시험을 해보겠습니다.</p>
+
+<h2 id="프로토타이핑">프로토타이핑</h2>
+
+<p>이제 부터 우리가 만들 화면을 미리 만들어 보고 작동시켜 보겠습니다. 우선 작업을 편하게 하기 위해서 ‘Hot Reload’기능을 이용하겠습니다.</p>
+
+<p>개발시 ‘Hot Reload’기능을 활성화 하면 매우 편리한데요. 네이티브 개발시에는 매번 새로 시작해야만 했던것을 소스가 저장되면 바로 화면에 반영이 되어 개발속도를 높일수 있는 매우 편리한 기능입니다.</p>
+
+<p>그럼 기능을 활성화 하기 위해서 iOS에서는 ‘Cmd+D’를 입렵하고 안드로이드에서는 menu버튼을 누릅니다.</p>
+
+<p>그럼 다음과 같은 메뉴가 나타납니다.</p>
 
 <p><img class="screenshot center" src="/images/screenshot002.jpg" /></p>
+
+<p>이중에서 ‘Enable Hot Reloading’을 선택하면 메뉴화면이 닫히고 화면이 리로딩되면서 기능이 활성화 됩니다. 앞으로는 소스를 저장할때마다 화면이 자동으로 갱신됩니다. 하지만 개발하다 보면 자동으로 갱신이 되지 않는 경우도 있습니다. 이런 경우에는 수동으로 ‘Cmd+R’ 또는 ‘RR’을 입력해서 강제로 리로딩 하는 수 밖에는 없습니다.</p>
+
+<p>그럼 먼저 리스트 화면을 만들어 보겠습니다.</p>
+
+<h3 id="리스트-화면-만들기">리스트 화면 만들기</h3>
+
+<p>본인이 사용하기 편한 에디터를 이용해서 우리가 생성한 Todo 프로젝트 소스를 엽니다. 저는 마이크로소프트의 Visual Code를 사용했습니다.</p>
+
+<p>프로젝트파일 리스트를 보면 아래와 같이 보이게 됩니다.</p>
+
+<p><img class="screenshot center" src="/images/screenshot003.png" /></p>
+
+<p>‘index.js’파일은 리엑트네이티브의 메인이라고 할 수 있습니다.</p>
+
+<p>내용을 보면 아래와 같습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="code"><pre><span class="k">import</span> <span class="p">{</span> <span class="nx">AppRegistry</span> <span class="p">}</span> <span class="k">from</span> <span class="s1">'react-native'</span><span class="p">;</span>
+<span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="s1">'./App'</span><span class="p">;</span>
+
+<span class="nx">AppRegistry</span><span class="p">.</span><span class="nx">registerComponent</span><span class="p">(</span><span class="s1">'Todo'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">App</span><span class="p">);</span></pre></td></tr></tbody></table></code></pre></figure>
+
+<p>리엑트네이티브에서는 ES6문법을 사용합니다. ES6에 대한 설명은 이 강좌의 범위를 벗어나므로 생략하겠습니다.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">import</span> <span class="nx">App</span> <span class="k">from</span> <span class="s1">'./App'</span><span class="p">;</span></code></pre></figure>
+
+<p>이것은 App.js에 App클래스를 App이라는 이름으로 가져온다는 의미입니다.
+<strong>npm</strong> 으로 설치한 모듈들은 상대경로 없이 가져오지만 우리가 만든 모듈들은 상대경로를 표시해줘야지만 가져올 수 있습니다.</p>
+
 
     <div class="ui horizontal divider">
         Thank You For Reading
@@ -112,6 +178,7 @@ react-native run-ios <span class="o">(</span>or run-android<span class="o">)</sp
                 <a class="header">Leorez</a>
                 <div class="description">
                     <p>Full stack programmer</p>
+                    <p>Data scientist</p>
                 </div>
             </div>
         </div>
